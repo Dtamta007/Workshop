@@ -1,12 +1,18 @@
 <!DOCTYPE html>
     <head>
-            
+            <style>
+                body {
+                        background-image: url("https://png.pngtree.com/thumb_back/fw800/background/20200907/pngtree-green-blackboard-education-background-image_398159.jpg");
+                        background-size: 100% 120%;
+
+                }
+            </style>
     </head>
-    <body>
-            <h1 style=" margin-left: 35%;">CALCULATOR AND</h1>
-            <h1 style=" margin-left: 35%;">SHAPE SELECTOR</h1>
-             <div style=" margin-top: 2%; height: 400px; width: 400px; margin-left: 35%; background-color: #dfe3ee;">
-                    <div style="height:40%; width:100%; border-color: black; border-style: dashed; background-color: #dfe3ee;">
+    <body style="margin-top: 4%;">
+            <h2 style=" margin-left: 35%;">CALCULATOR AND</h2>
+            <h2 style=" margin-left: 35%;">SHAPE SELECTOR</h2>
+             <div style=" margin-top: 0%; height: 400px; width: 400px; margin-left: 35%; ">
+                    <div style="height:40%; width:100%; border-color: black; border-style: dashed;">
                         <input type="text" placeholder="First Number" id="fno" style="height: 30px; width: 200px;" ><br>
                         <input type="text" placeholder="Second Number" id="sno"  style="height: 30px; width: 200px;">
                         <h4 id="result">Answer:</h4>
@@ -15,11 +21,11 @@
                         <button onclick="mul()">Multiply</button>
                         <button onclick="div()">Divide</button>
                     </div>
-                    <div style="height: 60%; width:100%; background-color: #dfe3ee;">
+                    <div style="height: 60%; width:100%; ">
                         <div style="height:50%; width:100%;">
-                            <div id="shape" style="border-style: dashed; margin-left: 100px; margin-top: 15px; Height: 100px; width: 100px; background-color: white;"></div>   
+                            <div id="shape" style="border-style: dashed; margin-left: 100px; margin-top: 15px; Height: 100px; width: 100px; "></div>   
                         </div>
-                        <div style="height:50%; width:100%; border-style: ridge; border-color: black; display: flex;  background-color: #dfe3ee;">
+                        <div style="height:50%; width:100%; border-style: ridge; border-color: black; display: flex;">
                             <button onclick="rectangle()" style="background-color: red; height: 50px; width: 100px; margin-top: 40px;">Rectangle</button><br>
                             <button onclick="square()"  style="background-color: yellow; margin-left: 50px;height: 80px; width: 80px;margin-top: 20px;">Square</button><br>
                             <button onclick="circle()"  style="background-color: green; margin-left: 100px; height: 50px; width: 50px;margin-top: 45px; border-radius: 50%;">Circle</button><br>
