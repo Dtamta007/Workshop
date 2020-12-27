@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+ <html>
+            <head>
+                <style>
+                    body{
+                        background: linear-gradient(45deg, #eea2a2, #bbc1bf, #57c6e1, #b49fda, #7ac5d8);                      
+                        animation-name: gradient;
+                        background-size: 400% 400%;
+                        animation-delay: 0s;
+                        animation-duration: 10s;
+                        animation-iteration-count: infinite;
+                    }
+                    #a{
+                        background: linear-gradient(-90deg, #cd9cf2, #f6f3ff); 
+                        animation: a1 8s ease infinite;
+                        background-size: 400% 400%;
+                    }
+                    #b{
+                        background: linear-gradient(-90deg, #cd9cf2, #f6f3ff); 
+                        animation: b1 8s ease infinite;
+                        background-size: 400% 400%;
+                    }
+                    @keyframes gradient{
+                        0%{
+                            background-position: 0% 50%;
+                        }
+                        50%{
+                            background-position: 100% 50%;
+                        }
+                        100%{
+                            background-color: 0% 50%;
+                        }
+                    }
+
+                    @keyframes a1{
+                        0%{
+                            background-position: 0% 50%;
+                        }
+                        50%{
+                            background-position: 100% 50%;
+                        }
+                        100%{
+                            background-color: 0% 50%;
+                        }
+                    }
+                    @keyframes b1{
+                        0%{
+                            background-position: 0% 50%;
+                        }
+                        50%{
+                            background-position: 100% 50%;
+                        }
+                        100%{
+                            background-color: 0% 50%;
+                        }
+                    }
+                </style>
+            </head>
+            <body>
+                <div style="margin-top: 15%; justify-content: center; display: flex;">
+                    <div> </div>
+                    <div style="background-color: white;">
+                        <table border=5 id="ta">
+                            <tr>
+                                <td colspan="4" align="center" id="a"><strong>STUDENT'S TABLE</strong></td>
+                            </tr>
+                            <tr>
+                                <td><b>Name</b></td>
+                                <td><b>Batch</b></td>
+                                <td><b>Branch</b></td>
+                                <td><b>Year</b></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div style="background-color: white; margin-left: 10px;" >
+                        <table border=5 id="tab">
+                            <tr>
+                                <td colspan="4" align="center" id="b"><strong>TEACHER'S TABLE</strong></td>
+                            </tr>
+                            <tr><td><b>Teacher's Name</b></td><td><b>Subject</b></td><td><b>Occupation</b></td></tr>  
+                        </table>
+                    </div>
+                    <button onclick="reveal()" style="margin-left: 10px; height: 30px; width: 120px; border-radius: 10%;">Show</button>
+                </div>
+            <script>
+                        var click=0;
+                        function reveal(){   
+                            var dtu={
+                                student:[],
+                                teacher:[]
+                                }
+                            if(click==0){
+                               
+                                dtu.student.push({'name':'Deepanshu','batch':'B12','branch':'ECE','year':'1st'},
+                                                {'name':'Bhanu','batch':'B6','branch':'MCE','year':'2st'},
+                                                {'name':'Deepanshi','batch':'A6','branch':'chem','year':'1st'},
+                                                {'name':'Aryan','batch':'A12','branch':'EP','year':'3st'},
+                                                {'name':'Bhav','batch':'A3','branch':'COE','year':'4st'})
+                                var t=document.getElementById('ta')
+                                for(var i=0;i<dtu.student.length;++i){
+                                    t.innerHTML+='<tr><td>'+dtu.student[i].name+'</td>'+'<td>'+dtu.student[i].batch+'</td>'+'<td>'+dtu.student[i].branch+'</td>'+'<td>'+dtu.student[i].year+'</td></tr>'
+                                }
+                                dtu.teacher.push({"tname":'Goonjan','Subject':'Maths','Occupation':'Class Coordinator'},
+                                                {"tname":'Richin','Subject':'BEE','Occupation':'Teaching Assit.'},
+                                                {"tname":'Aarti','Subject':'Physics','Occupation':'PhD, Scholar'},
+                                                {"tname":'Saket','Subject':'Eng. Graphics','Occupation':'Teaching Assit.'},
+                                                {"tname":'Sonia','Subject':'Programming','Occupation':'Teaching Assit.'})
+                                var t=document.getElementById('tab')
+                                for(var i=0;i<dtu.student.length;++i){
+                                    t.innerHTML+="<tr><td>"+dtu.teacher[i].tname+'</td>'+'<td>'+dtu.teacher[i].Subject+'</td>'+'<td>'+dtu.teacher[i].Occupation+'</td></tr>'
+                                }
+                                click++;
+                            }
+                            else
+                            {
+                                window.alert("All Items have been displayed");
+                            }
+                        }
+            </script>
+            
+            </body>
+ </html>
